@@ -1,4 +1,4 @@
-package com.smalaca.flightcenter.persistency.inmemory.customer;
+package com.smalaca.flightcenter.infrastructure.persistency.inmemory.customer;
 
 import com.smalaca.flightcenter.domain.customer.Customer;
 import com.smalaca.flightcenter.domain.customer.CustomerRepository;
