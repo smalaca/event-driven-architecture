@@ -6,4 +6,6 @@ public interface NotificationService {
     void notifyCustomer(String email, List<String> productsIds);
 
     void notifyWarehouse(List<String> productsIds);
+
+    void notifyOwnerAboutSaleOf(String productsId);
 }

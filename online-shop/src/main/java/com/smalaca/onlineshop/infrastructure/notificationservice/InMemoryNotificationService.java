@@ -21,4 +21,10 @@ class InMemoryNotificationService implements NotificationService {
         SafeSleep.sleep(500);
         LOGGER.info("Notification sent to: WAREHOUSE, about: " + productsIds + ".");
     }
+
+    @Override
+    public void notifyOwnerAboutSaleOf(String productsId) {
+        SafeSleep.sleep(500);
+        LOGGER.info("Notification sent to: OWNER, sold product : " + productsId + ".");
+    }
 }
