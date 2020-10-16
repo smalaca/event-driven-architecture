@@ -44,10 +44,10 @@ public class OrderController {
         List<Product> products = basketService.allFor(customerId);
         double totalPrice = products.stream().mapToDouble(Product::price).sum();
 
-        if (walletService.hasEnoughMoney(totalPrice)) {
+        if (walletService.hasEnoughMoney(customerId, totalPrice)) {
             List<String> productsIds = products.stream().map(Product::getId).collect(toList());
             warehouseService.blockProducts(productsIds);
-            walletService.pay(totalPrice);
+            walletService.pay(customerId, totalPrice);
             Customer customer = customerRepository.findById(customerId);
             notificationService.notifyCustomer(customer.getEmail(), productsIds);
             notificationService.notifyWarehouse(productsIds);

@@ -8,4 +8,12 @@ public class Confirmation {
         this.email = email;
         this.flightNumber = flightNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Confirmation{" +
+                "email='" + email + '\'' +
+                ", flightNumber='" + flightNumber + '\'' +
+                '}';
+    }
 }

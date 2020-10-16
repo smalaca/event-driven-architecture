@@ -1,7 +1,7 @@
 package com.smalaca.onlineshop.infrastructure.walletservice;
 
 public interface WalletService {
-    boolean hasEnoughMoney(double totalPrice);
+    boolean hasEnoughMoney(long customerId, double totalPrice);
 
-    void pay(double totalPrice);
+    void pay(long customerId, double totalPrice);
 }
