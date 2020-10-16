@@ -6,4 +6,6 @@ public interface NotificationService {
     void send(Confirmation confirmation);
 
     void sendToPlaneCrew(String flightNumber, List<String> seatsNumbers);
+
+    void notifyPlaneCrewAboutMistake(String flightNumber, List<String> seatsNumbers);
 }

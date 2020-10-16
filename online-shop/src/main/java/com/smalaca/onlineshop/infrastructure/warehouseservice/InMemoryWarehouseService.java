@@ -15,4 +15,9 @@ class InMemoryWarehouseService implements WarehouseService {
         SafeSleep.sleep(500);
         LOGGER.info("Products blocked: " + productsIds + ".");
     }
+
+    @Override
+    public void unblockProducts(List<String> productsIds) {
+        LOGGER.info("Products unblocked: " + productsIds + ".");
+    }
 }

@@ -20,4 +20,9 @@ class InMemoryNotificationService implements NotificationService {
     public void sendToPlaneCrew(String flightNumber, List<String> seatsNumbers) {
         LOGGER.info("Send to plane crew that seats: " + seatsNumbers + ", in flight: " + flightNumber + " are booked.");
     }
+
+    @Override
+    public void notifyPlaneCrewAboutMistake(String flightNumber, List<String> seatsNumbers) {
+        LOGGER.info("Send to plane crew that seats: " + seatsNumbers + ", in flight: " + flightNumber + " are unblocked.");
+    }
 }

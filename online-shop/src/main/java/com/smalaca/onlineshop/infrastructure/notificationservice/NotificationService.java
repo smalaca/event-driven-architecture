@@ -8,4 +8,6 @@ public interface NotificationService {
     void notifyWarehouse(List<String> productsIds);
 
     void notifyOwnerAboutSaleOf(String productsId);
+
+    void notifyOwnerAboutMistakenSaleOf(String productsId);
 }

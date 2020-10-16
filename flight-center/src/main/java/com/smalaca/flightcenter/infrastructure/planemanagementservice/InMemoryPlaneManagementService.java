@@ -20,4 +20,9 @@ class InMemoryPlaneManagementService implements PlaneManagementService {
         SafeSleep.sleep(1000);
         LOGGER.info("Seats blocked: " + seatsNumbers + ", flight number: " + flightNumber + ".");
     }
+
+    @Override
+    public void unblockSeats(List<String> seatsNumbers, String flightNumber) {
+        LOGGER.info("Seats unblocked: " + seatsNumbers + ", flight number: " + flightNumber + ".");
+    }
 }
